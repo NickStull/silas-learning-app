@@ -14,12 +14,13 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Silas' Learning App",
   description: "An interactive learning app for kids to explore surveys, graphs, and more!",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({ children }) {

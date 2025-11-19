@@ -31,6 +31,21 @@ const DEFAULT_OPTIONS = [
   { id: 4, name: "Tacos", count: 0 },
 ];
 
+// Custom Tooltip Component for better visibility
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-3">
+        <p className="font-bold text-gray-900 dark:text-white text-base mb-1">{label}</p>
+        <p className="text-gray-700 dark:text-gray-200 text-sm">
+          Votes: <span className="font-bold text-lg">{payload[0].value}</span>
+        </p>
+      </div>
+    );
+  }
+  return null;
+};
+
 export default function SurveyPage() {
   const [options, setOptions] = useState(DEFAULT_OPTIONS);
   const [newOption, setNewOption] = useState("");
@@ -204,7 +219,7 @@ export default function SurveyPage() {
                       height={60}
                     />
                     <YAxis tick={{ fontSize: 12 }} />
-                    <Tooltip />
+                    <Tooltip content={<CustomTooltip />} />
                     <Bar dataKey="count" name="Votes" radius={[8, 8, 0, 0]}>
                       {options.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -242,7 +257,7 @@ export default function SurveyPage() {
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Pie>
-                    <Tooltip />
+                    <Tooltip content={<CustomTooltip />} />
                   </PieChart>
                 </ResponsiveContainer>
                 {/* Legend for mobile */}
@@ -279,7 +294,7 @@ export default function SurveyPage() {
                       height={60}
                     />
                     <YAxis tick={{ fontSize: 12 }} />
-                    <Tooltip />
+                    <Tooltip content={<CustomTooltip />} />
                     <Line
                       type="monotone"
                       dataKey="count"
@@ -305,7 +320,7 @@ export default function SurveyPage() {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis type="number" tick={{ fontSize: 12 }} />
                     <YAxis dataKey="name" type="category" width={80} tick={{ fontSize: 12 }} />
-                    <Tooltip />
+                    <Tooltip content={<CustomTooltip />} />
                     <Bar dataKey="count" name="Votes" radius={[0, 8, 8, 0]}>
                       {options.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
