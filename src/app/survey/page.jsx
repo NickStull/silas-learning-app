@@ -97,7 +97,7 @@ export default function SurveyPage() {
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-            📊 Silas's Survey Lab
+            📊 Silas' Survey Lab
           </h1>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2">
             What should we have for dinner? Let's collect votes and see the results!

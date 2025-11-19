@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Silas's Learning App",
+  title: "Silas' Learning App",
   description: "An interactive learning app for kids to explore surveys, graphs, and more!",
   viewport: {
     width: "device-width",

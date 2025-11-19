@@ -7,7 +7,7 @@ export default function Home() {
         <div className="max-w-4xl w-full space-y-6 sm:space-y-8 text-center">
           <div className="space-y-3 sm:space-y-4 px-2">
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
-              🎓 Silas's Learning App
+              🎓 Silas' Learning App
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300">
               An interactive place to learn and explore!
