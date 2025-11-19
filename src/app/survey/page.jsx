@@ -50,10 +50,14 @@ export default function SurveyPage() {
     setIsLoaded(true);
   }, []);
 
-  // Save data to localStorage whenever options change
+  // Save data to localStorage with debouncing to avoid lag
   useEffect(() => {
     if (isLoaded) {
-      localStorage.setItem("surveyData", JSON.stringify(options));
+      const timeoutId = setTimeout(() => {
+        localStorage.setItem("surveyData", JSON.stringify(options));
+      }, 300); // Wait 300ms after last change before saving
+
+      return () => clearTimeout(timeoutId);
     }
   }, [options, isLoaded]);
 
