@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script src="https://cta.lqr.ai/api/drawer/v2?id=d60333f7-2fa8-490c-8a0f-de7618dc119c"></script>
+        {/* <script src="https://cta.lqr.ai/api/drawer/v2?id=d60333f7-2fa8-490c-8a0f-de7618dc119c"></script> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
