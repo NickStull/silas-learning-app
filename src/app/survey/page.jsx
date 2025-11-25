@@ -52,16 +52,16 @@ export default function SurveyPage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Load external script
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cta.lqr.ai/api/drawer/v2?id=32bd1397-9d17-42d1-9803-82d0c060f28b";
-    script.async = true;
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://cta.lqr.ai/api/drawer/v2?id=32bd1397-9d17-42d1-9803-82d0c060f28b";
+  //   script.async = true;
+  //   document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   // Load data from localStorage on mount
   useEffect(() => {
