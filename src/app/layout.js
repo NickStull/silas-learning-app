@@ -26,9 +26,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      <script src="https://cta.lqr.ai/api/drawer/v2?id=32bd1397-9d17-42d1-9803-82d0c060f28b"></script>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
